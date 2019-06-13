@@ -1,5 +1,5 @@
 var audio, playbtn = [], audio_playing;
-var audio_clips = ["audio/Bacchus_clip.mp3", "audio/Nomad_clip.mp3", "audio/Reset_My_Year_clip.mp3", "audio/Thin_White_Duke_clip.mp3"];
+var audio_clips = ["audio/Bacchus_clip.mp3", "audio/Nomad_clip.mp3", "audio/Reset_My_Year_clip.mp3", "audio/Thin_White_Duke_clip.mp3", "audio/Special_Influencer_clip.mp3"];
 
 function initAudioPlayer(){
 	audio = new Audio();
@@ -10,12 +10,14 @@ function initAudioPlayer(){
 	playbtn[1] = document.getElementById("nomadplaybtn");
 	playbtn[2] = document.getElementById("reset_my_yearplaybtn");
 	playbtn[3] = document.getElementById("thin_white_dukeplaybtn");
+	playbtn[4] = document.getElementById("special_influencerplaybtn");
 	
 	// Add Event Handling.  Note: Cannot use a for loop as function playPause stored as text
 	playbtn[0].addEventListener("click", function() {playPause(0);});
 	playbtn[1].addEventListener("click", function() {playPause(1);});
 	playbtn[2].addEventListener("click", function() {playPause(2);});
 	playbtn[3].addEventListener("click", function() {playPause(3);});
+	playbtn[4].addEventListener("click", function() {playPause(4);});
 		
 	audio.addEventListener("ended",reset_playbtns);
 
