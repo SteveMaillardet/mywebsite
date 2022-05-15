@@ -1,6 +1,7 @@
 var audio, playbtn = [], audio_playing;
 var audio_clips = ["audio/Bacchus_clip.mp3", "audio/Nomad_clip.mp3", "audio/Reset_My_Year_clip.mp3", "audio/Thin_White_Duke_clip.mp3", 
-"audio/Special_Influencer_clip.mp3", "audio/Pixel_Perfect_Surgery_clip.mp3","audio/Sci_Fi_Future_clip.mp3"];
+"audio/Special_Influencer_clip.mp3", "audio/Pixel_Perfect_Surgery_clip.mp3","audio/Sci_Fi_Future_clip.mp3","audio/Long_Way_Home.mp3",
+"audio/See_The_Light.mp3","audio/Patches_Of_Sunshine.mp3","audio/Young_At_Heart.mp3"];
 
 function initAudioPlayer(){
 	audio = new Audio();
@@ -14,6 +15,10 @@ function initAudioPlayer(){
 	playbtn[4] = document.getElementById("special_influencerplaybtn");
 	playbtn[5] = document.getElementById("pixel_perfect_playbtn");
 	playbtn[6] = document.getElementById("sci_fi_future_playbtn");
+	playbtn[7] = document.getElementById("long_way_homeplaybtn");
+	playbtn[8] = document.getElementById("see_the_lightplaybtn");
+	playbtn[9] = document.getElementById("patches_of_sunshineplaybtn");
+	playbtn[10] = document.getElementById("young_at_heartplaybtn");
 	
 	// Add Event Handling.  Note: Cannot use a for loop as function playPause stored as text
 	playbtn[0].addEventListener("click", function() {playPause(0);});
@@ -23,6 +28,10 @@ function initAudioPlayer(){
 	playbtn[4].addEventListener("click", function() {playPause(4);});
 	playbtn[5].addEventListener("click", function() {playPause(5);});
 	playbtn[6].addEventListener("click", function() {playPause(6);});
+	playbtn[7].addEventListener("click", function() {playPause(7);});
+	playbtn[8].addEventListener("click", function() {playPause(8);});
+	playbtn[9].addEventListener("click", function() {playPause(9);});
+	playbtn[10].addEventListener("click", function() {playPause(10);});
 		
 	audio.addEventListener("ended",reset_playbtns);
 
